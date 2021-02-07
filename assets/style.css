@@ -3,6 +3,7 @@
     --header-color: #2B2B2B;
     --header2-color: #212121;
     --nav-color: #737A7A;
+    --boxshadow-color: rgba(240, 240, 240, 0.342);
     --a-color: #ffffff;
     --p-color: #ffffff;
 }
@@ -23,7 +24,8 @@ header {
     flex-direction: column;
     justify-content: space-between;
     margin-bottom: 2%;
-    padding: 1%;    
+    padding: 1%;
+    box-shadow: 10px 10px 5px 5px var(--boxshadow-color);
     background-color: var(--header-color);
 }
 
@@ -37,7 +39,7 @@ header h1 {
 }
 
 nav {
-    flex: 1 1 65%;
+    flex: 2 2 65%;
     margin: 2% 0;
     padding: 20px 0;
     background-color: var(--nav-color);
@@ -49,7 +51,7 @@ nav {
 }
 .nav-links li {
     padding: 1% 6% 1% 1%;
-    font-size: 2.1vh;
+    font-size: 2.5vh;
     text-transform: uppercase;
 }
 
@@ -60,43 +62,35 @@ nav {
     text-decoration: none;
 }
 
+.project-heading {
+    text-align: center;
+    text-transform: uppercase;
+    padding: 2vh;
+    background-color: var(--nav-color);
+}
+
+.project-gallery {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.project-gallery figure {
+    flex: 1 2 20%;
+    border: 5px solid var(--nav-color);
+    margin: 5px;
+}
+
 img {
     max-width: 50%;
     height: auto;
-    margin: 1%;
+    object-fit: cover;
   }
 
 img[src*="600.jpg"] {
     max-width: 100%;
     height: auto;
 }
-
-/* To be used project classes */
-/* #projects {
-
-}
-
-.project-gallery {
-
-}
-
-.project-description {
-    
-} */
-
-/* To be used about me and contact classes */
-/* #about {
-
-}
-
-.about-me-section {
-
-}
-
-.contaction-section {
-
-} */
-
 
 /* Footer Styling */
 
@@ -113,23 +107,32 @@ footer {
 @media screen and (min-width:768px) {
     header {
         flex-direction: row;
+        flex-wrap: wrap;
     }
     header h1 {
         margin: 2%;
         padding: 2%;
     }
     .nav-links li {
-        font-size: 3.7vh;
-    }  
+        font-size: 3.9vw;
+    }
+    .project-gallery {
+        flex-direction: row;
+        flex-wrap: wrap-reverse;
+        justify-content: flex-start;
+    }
+    img {
+        min-width: 50%;
+        height: auto;
+    }
+    img[src*="600.jpg"] {
+        min-width: 100%;
+        height: auto;
+    }
 }
 
 /* Desktop Size */
 @media screen and (min-width:900px) {
-    /* header {
-        flex-direction: row;
-    } */
-    header h1 {
-    }
     .nav-links li {
         font-size: 4.5vh;
     }  
@@ -137,4 +140,5 @@ footer {
     .nav-links a:focus {
     text-decoration: line-through
     }
+
 }
