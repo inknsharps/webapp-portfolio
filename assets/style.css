@@ -1,0 +1,67 @@
+:root {
+    --background-color: #212121;
+    --header-color: #2B2B2B;
+    --nav-color: #737A7A;
+    --a-color: #ffffff;
+    --p-color: #ffffff;
+}
+
+/* Mobile first, so flex-drection is column by default */
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: var(--p-color);
+    background-image: url(./images/1021-2048x1206.jpg);
+    background-color: var(--background-color);
+}
+
+/* Header styling */
+
+header {
+    background-color: var(--header-color);
+}
+
+nav {
+    background-color: var(--nav-color);
+}
+
+.nav-links {
+    display: flex;
+    justify-content: flex-end;
+    text-align: right;
+}
+
+.nav-links li {
+    padding-left: 10%;
+}
+
+/* All a tags under nav are styled like so */
+
+.nav-links a {
+    color: var(--a-color);
+}
+
+/* Footer Styling */
+
+footer {
+    display: block;
+    clear: both;
+    background-color: var(--header-color);
+}
+
+/* Media queries */
+/* Tablet Size */
+
+@media screen and (min-width: 768px) {
+    body {
+        flex-direction: row;
+        flex-wrap: wrap;
+}
+
+/* Desktop Size */
+
+@media screen and (min-width: 900px) {
+    body {
+        display: block;
+    }
+}
