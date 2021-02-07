@@ -1,14 +1,5 @@
-/* Box sizing rules */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-/* Remove default margin and padding*/
 * {
-  margin: 0;
-  padding: 0;
+  box-sizing: border-box;
 }
 
 /* Remove font sizing for h1-6 */

@@ -31,7 +31,7 @@ header h1 {
     flex: 1 1 20%;
     text-align: left;
     text-transform: uppercase;
-    font-size: 24px;
+    font-size: 5vh;
     margin:0;
     background-color: var(--header2-color)
 }
@@ -49,7 +49,7 @@ nav {
 }
 .nav-links li {
     padding: 1% 6% 1% 1%;
-    font-size: 18px;
+    font-size: 2.1vh;
     text-transform: uppercase;
 }
 
@@ -61,9 +61,15 @@ nav {
 }
 
 img {
+    max-width: 50%;
+    height: auto;
+    margin: 1%;
+  }
+
+img[src*="600.jpg"] {
     max-width: 100%;
     height: auto;
-  }
+}
 
 /* To be used project classes */
 /* #projects {
@@ -109,12 +115,11 @@ footer {
         flex-direction: row;
     }
     header h1 {
-        font-size: 32px;
         margin: 2%;
         padding: 2%;
     }
     .nav-links li {
-        font-size: 28px;
+        font-size: 3.7vh;
     }  
 }
 
@@ -124,9 +129,12 @@ footer {
         flex-direction: row;
     } */
     header h1 {
-        font-size: 32px;
     }
     .nav-links li {
-        font-size: 28px;
+        font-size: 4.5vh;
     }  
+    .nav-links a:hover,
+    .nav-links a:focus {
+    text-decoration: line-through
+    }
 }
