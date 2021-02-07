@@ -60,8 +60,13 @@ nav {
     text-decoration: none;
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+  }
+
 /* To be used project classes */
-/* .project-section {
+/* #projects {
 
 }
 
@@ -74,7 +79,7 @@ nav {
 } */
 
 /* To be used about me and contact classes */
-/* .info-section {
+/* #about {
 
 }
 
@@ -92,6 +97,7 @@ nav {
 footer {
     display: block;
     clear: both;
+    text-align: center;
     background-color: var(--header-color);
 }
 
