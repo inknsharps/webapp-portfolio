@@ -14,24 +14,23 @@ body {
     font-family: Arial, Helvetica, sans-serif;
     color: var(--p-color);
     background-image: url(./images/1021-2048x1206.jpg);
+    background-size: cover;
     background-color: var(--background-color);
 }
 
-/* Header styling */
+/* Header and navigation styling */
 
 header {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    margin-bottom: 2%;
-    padding: 1%;
-    box-shadow: 10px 10px 5px 5px var(--boxshadow-color);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
     background-color: var(--header-color);
 }
 
 header h1 {
     flex: 1 1 20%;
-    text-align: left;
+    text-align: center;
     text-transform: uppercase;
     font-size: 5vh;
     margin:0;
@@ -41,7 +40,7 @@ header h1 {
 nav {
     flex: 2 2 65%;
     margin: 2% 0;
-    padding: 20px 0;
+    padding: 0.5vh 0;
     background-color: var(--nav-color);
 }
 
@@ -51,7 +50,7 @@ nav {
 }
 .nav-links li {
     padding: 1% 6% 1% 1%;
-    font-size: 2.5vh;
+    font-size: 2vh;
     text-transform: uppercase;
 }
 
@@ -62,10 +61,24 @@ nav {
     text-decoration: none;
 }
 
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+/* About me section styling. */
+
+#about {
+    margin-top: 18vh;
+}
+
+/* Projects section styling. */
+
+.about-me-heading,
 .project-heading {
     text-align: center;
     text-transform: uppercase;
-    padding: 2vh;
+    padding: 1vh;
     background-color: var(--nav-color);
 }
 
@@ -75,21 +88,29 @@ nav {
     justify-content: space-evenly;
 }
 
-.project-gallery figure {
-    flex: 1 2 20%;
+/* This class determines the first object in the flexbox to be 100%, */
+.project-main {
+    flex: 1 1 100%;
     border: 5px solid var(--nav-color);
     margin: 5px;
 }
 
-img {
+.project-aside {
+    flex: 1 1 20%;
+    border: 5px solid var(--nav-color);
+    margin: 5px;
+}
+
+/* img {
     max-width: 50%;
     height: auto;
     object-fit: cover;
-  }
+  } */
 
 img[src*="600.jpg"] {
     max-width: 100%;
     height: auto;
+    object-fit: cover;
 }
 
 /* Footer Styling */
@@ -105,25 +126,29 @@ footer {
 
 /* Tablet size */
 @media screen and (min-width:768px) {
-    header {
-        flex-direction: row;
-        flex-wrap: wrap;
-    }
     header h1 {
+        text-align: left;
         margin: 2%;
         padding: 2%;
     }
     .nav-links li {
         font-size: 3.9vw;
     }
+    main {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }    
+    #about {
+        margin-top: 30vh;
+    }
+    .about-me-heading,
+    .project-heading {
+        padding: 2vh;
+    }
     .project-gallery {
         flex-direction: row;
-        flex-wrap: wrap-reverse;
+        flex-wrap: wrap;
         justify-content: flex-start;
-    }
-    img {
-        min-width: 50%;
-        height: auto;
     }
     img[src*="600.jpg"] {
         min-width: 100%;
@@ -132,7 +157,12 @@ footer {
 }
 
 /* Desktop Size */
-@media screen and (min-width:900px) {
+@media screen and (min-width:960px) {
+    header {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
     .nav-links li {
         font-size: 4.5vh;
     }  
