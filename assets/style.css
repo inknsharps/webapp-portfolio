@@ -3,7 +3,7 @@
     --header-color: #2B2B2B;
     --header2-color: #212121;
     --nav-color: #737A7A;
-    --boxshadow-color: rgba(240, 240, 240, 0.342);
+    --boxseethrough-color: rgba(83, 83, 83, 0.555);
     --a-color: #ffffff;
     --p-color: #ffffff;
 }
@@ -39,7 +39,7 @@ header h1 {
 
 nav {
     flex: 2 2 65%;
-    margin: 2% 0;
+    margin: 7vh 0;
     padding: 0.5vh 0;
     background-color: var(--nav-color);
 }
@@ -107,12 +107,6 @@ main {
     margin: 5px;
 }
 
-/* img {
-    max-width: 50%;
-    height: auto;
-    object-fit: cover;
-  } */
-
 img[src*="600.jpg"] {
     max-width: 100%;
     height: auto;
@@ -125,13 +119,19 @@ img[src*="600.jpg"] {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
-    margin: 3vh;
+    border: 5px solid var(--nav-color);
+    margin: 2.5vh 2vh;
+    max-width: 100%;
+    background-color: var(--boxseethrough-color);
+}
+
+.about-me-biography img {
+    margin: 4vh 4vh 0;
     max-width: 100%;
 }
 
-.about-me-biography img,
-.about-me-biography p {
-    margin: 4vh 4vh 0;
+.about-me-biography p{
+    margin: 4vh 4vh;
     max-width: 100%;
 }
 
@@ -139,12 +139,12 @@ img[src*="600.jpg"] {
 
 #contact {
     display: block;
-
 }
 
 form {
     padding: 2vh;
-    background-color: var(--header-color);
+    border: 5px solid var(--nav-color);
+    background-color: var(--boxseethrough-color);
 }
 
 input {
@@ -162,6 +162,8 @@ footer {
     display: block;
     clear: both;
     text-align: center;
+    margin: 1vh 0;
+    padding: 0.5vh;
     background-color: var(--header-color);
 }
 
@@ -171,8 +173,8 @@ footer {
 @media screen and (min-width:768px) {
     header h1 {
         text-align: left;
-        margin: 2% 2% 2% 0;
-        padding: 2%;
+        margin: 7vh 2vh 7vh 0;
+        padding: 2vh;
     }
     .nav-links {
         justify-content: flex-end;
@@ -220,7 +222,7 @@ footer {
         flex-wrap: none;
     }
     .nav-links li {
-        padding: 5.5vh 1vh 5.5vh 1vh;
+        padding: 2vh 1vh;
         font-size: 3vh;
     }  
     .nav-links a:hover,
@@ -246,16 +248,21 @@ footer {
         flex-direction: row;
         justify-content: space-evenly;
     }
-
     .contact-section form {
         flex: 1 1 33.33%;
         min-width: 33.33%;
     }
-
     .contact-section div {
         flex: 1 1 100%;
         min-width: 33.33%;
         padding: 0 10vh;
     }
-    
+}
+
+/* For 720p screens */
+
+@media screen and (min-width:1280px) {
+    main {
+        margin: 4vh 20vh;
+    }
 }
