@@ -46,7 +46,8 @@ nav {
 
 .nav-links {
     display: flex;
-    justify-content: flex-end;
+    justify-content: center;
+    padding: 0.1vh;
 }
 .nav-links li {
     padding: 1vh 1vh 1vh 1vh;
@@ -90,6 +91,7 @@ main {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    margin: 2vh;
 }
 
 /* This class determines the first object in the flexbox to be 100%, */
@@ -120,24 +122,33 @@ img[src*="600.jpg"] {
 /* About me section styling. */
 
 .about-me-biography {
-    background-color: var(--background-color)
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    margin: 3vh;
+    max-width: 100%;
+}
+
+.about-me-biography img,
+.about-me-biography p {
+    margin: 4vh 4vh 0;
+    max-width: 100%;
 }
 
 /* Contact form styling */
 
 #contact {
-    align-self: center;
+    display: block;
+
 }
 
-.contact-section {
+form {
     padding: 2vh;
     background-color: var(--header-color);
 }
 
-button {
-    position: relative;
-    transform: translateX(210%) translateY(25%);
-    top: 50%;
+input {
+    width: 100%;
 }
 
 textarea {
@@ -163,6 +174,10 @@ footer {
         margin: 2% 2% 2% 0;
         padding: 2%;
     }
+    .nav-links {
+        justify-content: flex-end;
+        margin-right: 5vh;
+    }
     .nav-links li {
         font-size: 3.9vw;
     }
@@ -173,9 +188,16 @@ footer {
     .project-heading {
         padding: 2vh;
     }
+    .about-me-biography {
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
     .about-me-biography img {
-        float: left;
-        max-width: 33.33%;
+        max-width: 50%;
+    }
+    .about-me-biography p {
+        max-width: 100%;
     }
     img[src*="600.jpg"] {
         min-width: 100%;
@@ -189,6 +211,7 @@ footer {
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
+        column-count: 2;
         margin: 4vh;
     }    
     header {
@@ -218,4 +241,21 @@ footer {
     .project-heading {
         margin: 1vh;
     }
+    .contact-section {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    .contact-section form {
+        flex: 1 1 33.33%;
+        min-width: 33.33%;
+    }
+
+    .contact-section div {
+        flex: 1 1 100%;
+        min-width: 33.33%;
+        padding: 0 10vh;
+    }
+    
 }
