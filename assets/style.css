@@ -6,6 +6,7 @@
     --boxseethrough-color: rgba(83, 83, 83, 0.555);
     --a-color: #ffffff;
     --p-color: #ffffff;
+    --border: 3px double var(--nav-color);
 }
 
 /* Mobile first, so flex-direction is column by default */
@@ -25,11 +26,12 @@ header {
     top: 0;
     left: 0;
     width: 100%;
+    z-index: 1;
     background-color: var(--header-color);
 }
 
 header h1 {
-    flex: 1 1 20%;
+    flex: 1 1 32%;
     text-align: center;
     text-transform: uppercase;
     font-size: 5vh;
@@ -97,13 +99,13 @@ main {
 /* This class determines the first object in the flexbox to be 100%, */
 .project-main {
     flex: 1 1 100%;
-    border: 5px solid var(--nav-color);
+    border: var(--border);
     margin: 5px;
 }
 
 .project-aside {
     flex: 1 1 20%;
-    border: 5px solid var(--nav-color);
+    border: var(--border);
     margin: 5px;
 }
 
@@ -113,13 +115,44 @@ img[src*="600.jpg"] {
     object-fit: cover;
 }
 
+/* Hover overlay controls */
+
+.project-main,
+.project-aside {
+    position: relative;
+}
+
+.overlay-main {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 5%;
+    padding: 1vh 10vh;
+    background-color: var(--boxseethrough-color);
+}
+
+.overlay-aside {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 5%;
+    padding: 0vh 1vh;
+    background-color: var(--boxseethrough-color);
+}
+
+.overlay-main:hover,
+.overlay-aside:hover {
+    opacity: 1;
+}
+
+
 /* About me section styling. */
 
 .about-me-biography {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
-    border: 5px solid var(--nav-color);
+    border: var(--border);
     margin: 2.5vh 2vh;
     max-width: 100%;
     background-color: var(--boxseethrough-color);
@@ -143,7 +176,7 @@ img[src*="600.jpg"] {
 
 form {
     padding: 2vh;
-    border: 5px solid var(--nav-color);
+    border: var(--border);
     background-color: var(--boxseethrough-color);
 }
 
@@ -184,7 +217,7 @@ footer {
         font-size: 3.9vw;
     }
     #projects {
-        margin-top: 30vh;
+        margin-top: 45vh;
     }
     .about-me-heading,
     .project-heading {
