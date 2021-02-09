@@ -55,6 +55,7 @@ nav {
     justify-content: center;
     padding: 0.1vh;
 }
+
 .nav-links li {
     padding: 1vh 1vh 1vh 1vh;
     font-size: 2vh;
@@ -159,7 +160,6 @@ img[src*="600.jpg"] {
     opacity: 1;
 }
 
-
 /* About me section styling. */
 
 .about-me-heading {
@@ -182,7 +182,7 @@ img[src*="600.jpg"] {
     max-width: 100%;
 }
 
-.about-me-biography p{
+.about-me-biography p {
     margin: 4vh 4vh;
     max-width: 20%;
     height: auto;
