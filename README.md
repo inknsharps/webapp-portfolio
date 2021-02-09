@@ -1,5 +1,7 @@
 # Web Application Portfolio Template
 
+<img src="./assets/readme-img/banner.jpg">
+
 ## About
 
 This is a portfolio page that I built for showcasing my deployed web applications from the Columbia Engineering Bootcamp course.
@@ -17,6 +19,17 @@ This is a portfolio page that I built for showcasing my deployed web application
 * And some accessibility aids such as:
     * Strikethrough nav links for desktop browsing.
     * Brightly contrasted contact form fields when selected.
+
+## Demos
+
+### Responsive page demo:
+<img src="./assets/readme-img/responsive_demo.gif">
+
+### Navigation bar demo:
+<img src="./assets/readme-img/nav_demo.gif">
+
+### Contact form demo:
+<img src="./assets/readme-img/contact-form_demo.gif">
 
 ## To-do
 
