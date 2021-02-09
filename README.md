@@ -1,4 +1,4 @@
-# Web Application Portfolio Template
+# Web Application Portfolio
 
 <img src="./assets/readme-img/banner.jpg">
 
