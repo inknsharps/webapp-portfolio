@@ -36,6 +36,11 @@ a:not([class]) {
   text-decoration-skip-ink: auto;
 }
 
+/* Remove outlines from focusing on a elements   */
+a:focus {
+  outline: none;
+}
+
 /* Make images easier to work with */
 img,
 picture {
@@ -48,6 +53,7 @@ input,
 button,
 textarea,
 select {
+  outline: none;
   font: inherit;
 }
 

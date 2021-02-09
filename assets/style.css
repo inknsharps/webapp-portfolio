@@ -4,9 +4,11 @@
     --header2-color: #212121;
     --nav-color: #737A7A;
     --boxseethrough-color: rgba(83, 83, 83, 0.555);
+    --boxseethrough-color2: rgba(59, 59, 59, 0.507);
     --a-color: #ffffff;
     --p-color: #ffffff;
     --border: 3px double var(--nav-color);
+    --form-border: 1px solid var(--nav-color);
 }
 
 /* Mobile first, so flex-direction is column by default */
@@ -35,12 +37,14 @@ header h1 {
     text-align: center;
     text-transform: uppercase;
     font-size: 5vh;
+    border-radius: 0 150px 0 0;
     margin:0;
-    background-color: var(--header2-color)
+    background-color: var(--header2-color);
 }
 
 nav {
     flex: 2 2 65%;
+    border-radius: 0 0 0 150px;
     margin: 7vh 0;
     padding: 0.5vh 0;
     background-color: var(--nav-color);
@@ -76,7 +80,7 @@ main {
 /* Projects section styling. */
 
 #projects {
-    margin-top: 18vh;
+    margin-top: 31vh;
 }
 
 .about-me-heading,
@@ -89,11 +93,15 @@ main {
     background-color: var(--nav-color);
 }
 
+.project-heading {
+    border-radius: 0 150px;
+}
+
 .project-gallery {
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
-    margin: 2vh;
+    margin: 3vh;
 }
 
 /* This class determines the first object in the flexbox to be 100%, */
@@ -140,6 +148,12 @@ img[src*="600.jpg"] {
     background-color: var(--boxseethrough-color);
 }
 
+.overlay-main a,
+.overlay-aside a {
+    color: var(--a-color);
+    text-decoration: none;
+}   
+
 .overlay-main:hover,
 .overlay-aside:hover {
     opacity: 1;
@@ -148,12 +162,17 @@ img[src*="600.jpg"] {
 
 /* About me section styling. */
 
+.about-me-heading {
+    border-radius: 0 150px 0 150px;
+    background-color: var(--header2-color);
+}
+
 .about-me-biography {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
     border: var(--border);
-    margin: 2.5vh 2vh;
+    margin: 3.5vh;
     max-width: 100%;
     background-color: var(--boxseethrough-color);
 }
@@ -165,7 +184,8 @@ img[src*="600.jpg"] {
 
 .about-me-biography p{
     margin: 4vh 4vh;
-    max-width: 100%;
+    max-width: 20%;
+    height: auto;
 }
 
 /* Contact form styling */
@@ -175,18 +195,34 @@ img[src*="600.jpg"] {
 }
 
 form {
-    padding: 2vh;
+    margin: 2vh 4vh;
+    padding: 1vh 2vh 5vh;
     border: var(--border);
+    color: var(--p-color);
     background-color: var(--boxseethrough-color);
 }
 
-input {
-    width: 100%;
-}
-
+input,
 textarea {
     width: 100%;
     resize: none;
+    margin-bottom: 1.5  vh;    
+    border: var(--form-border);
+    color: var(--p-color);  
+    background-color: var(--boxseethrough-color2);
+}
+
+button {
+    color: var(--p-color);
+    border: var(--form-border);
+    background-color: var(--nav-color);
+}
+
+.nav-links a:focus,
+input:focus,
+textarea:focus,
+button:focus {
+    border: 1px solid var(--p-color);
 }
 
 /* Footer Styling */
@@ -198,6 +234,13 @@ footer {
     margin: 1vh 0;
     padding: 0.5vh;
     background-color: var(--header-color);
+}
+
+.social-media {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-bottom: 2vh;
 }
 
 /* Media Queries */
