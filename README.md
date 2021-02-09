@@ -1,6 +1,28 @@
-# webapp-portfolio
+# Web Application Portfolio Template
 
-A portfolio of my currently deployed web applications.
+## About
+
+This is a portfolio page that I built for showcasing my deployed web applications from the Columbia Engineering Bootcamp course.
+
+## Features
+
+* Clean minimalistic page design.
+* Projects, biographical and contact forms neatly arranged and displayed on one page.
+* Fixed navigation bar.
+* Hover over project titles.
+* Built with mobile first design in mind, so the page is responsive to many screen widths.
+* Code related aids such as:
+    * Colors being completely defined by `:root` rules for easy theme changes.
+    * A `reset.css` for better browser support.
+* And some accessibility aids such as:
+    * Strikethrough nav links for desktop browsing.
+    * Brightly contrasted contact form fields when selected.
+
+## To-do
+
+* Implemention of javascript functionality.
+* Add links to deployed applications.
+* Back-end development required for a functional website.
 
 ## Credits
 
