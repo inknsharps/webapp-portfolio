@@ -384,8 +384,8 @@ footer {
     } */
     /* Styling to overwrite the previously defined :target::before rules and prevent any extra space from being added when #about is clicked in the nav. */
     #about:target::before { 
-        margin-top: 30vh; 
-    }
+        margin-top: 15vh; 
+    
     .contact-section {
         display: flex;
         flex-direction: row;
