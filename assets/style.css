@@ -400,7 +400,7 @@ footer {
     .contact-section::after {
         display: block;
         content: " "; 
-        margin: 0 15vh; 
+        margin: 0 30vh; 
         visibility: hidden; 
         pointer-events: none;
     }
