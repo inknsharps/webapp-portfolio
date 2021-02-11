@@ -375,17 +375,17 @@ footer {
     .project-aside a:hover::after {
         width: 15vh;
     }
-    /* #about::before {
+    #about::before {
         display: block; 
         content: " "; 
         margin-top: 15vh;   
         visibility: hidden; 
         pointer-events: none;
-    } */
+    }
     /* Styling to overwrite the previously defined :target::before rules and prevent any extra space from being added when #about is clicked in the nav. */
     #about:target::before { 
         margin-top: 15vh; 
-    
+    }
     .contact-section {
         display: flex;
         flex-direction: row;
