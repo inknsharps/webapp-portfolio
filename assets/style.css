@@ -157,12 +157,13 @@ img[src*="600.jpg"] {
     transition: opacity 1s 0s;
 }
 
+/* This adds an overlay with text. Will need to update styling once web applications are created and properly linked. */
 .project-main a:hover::after,
 .project-aside a:hover::after {
     display: flex;
     justify-content: center;
     align-items: center;
-    content: "Description";
+    content: "Project Name";
     position: absolute;
     top: 0;
     right: 0;
@@ -177,6 +178,7 @@ img[src*="600.jpg"] {
 
 /* About me section styling. */
 
+/* This adds a section before the column so you scroll smoothly to this section when clicking the link in the nav. */
 #about::before { 
     display: block; 
     content: " "; 
@@ -231,7 +233,7 @@ input,
 textarea {
     width: 100%;
     resize: none;
-    margin-bottom: 1.5  vh;    
+    margin-bottom: 1.5vh;    
     border: var(--form-border);
     color: var(--p-color);  
     background-color: var(--boxseethrough-color2);
@@ -243,6 +245,7 @@ button {
     background-color: var(--nav-color);
 }
 
+/* Gives a high contrast border when fields are in focus */
 .nav-links a:focus,
 input:focus,
 textarea:focus,
