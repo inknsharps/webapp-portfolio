@@ -11,6 +11,10 @@
     --form-border: 1px solid var(--nav-color);
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 /* Mobile first, so flex-direction is column by default */
 
 body {
@@ -80,9 +84,14 @@ main {
 
 /* Projects section styling. */
 
-#projects {
-    margin-top: 31vh;
-}
+/* This adds a section before the column so you scroll smoothly to this section when clicking the link in the nav. */
+#projects::before { 
+    display: block; 
+    content: " "; 
+    margin-top: 31vh; 
+    visibility: hidden; 
+    pointer-events: none;
+  }
 
 .about-me-heading,
 .project-heading,
@@ -164,6 +173,14 @@ img[src*="600.jpg"] {
 
 /* About me section styling. */
 
+#about::before { 
+    display: block; 
+    content: " "; 
+    margin-top: 31vh; 
+    visibility: hidden; 
+    pointer-events: none;
+  }
+
 .about-me-heading {
     border-radius: 0 150px 0 150px;
     background-color: var(--header2-color);
@@ -241,7 +258,7 @@ footer {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    margin-bottom: 2vh;
+    margin-top: 2vh;
 }
 
 /* Media Queries */
@@ -260,9 +277,20 @@ footer {
     .nav-links li {
         font-size: 3.9vw;
     }
-    #projects {
-        margin-top: 45vh;
+    #projects::before { 
+        display: block; 
+        content: " "; 
+        margin-top: 50vh; 
+        visibility: hidden; 
+        pointer-events: none;
     }
+    #about::before { 
+        display: block; 
+        content: " "; 
+        margin-top: 50vh; 
+        visibility: hidden; 
+        pointer-events: none;
+      }
     .about-me-heading,
     .project-heading {
         padding: 2vh;
@@ -311,9 +339,15 @@ footer {
         flex-wrap: wrap;
         justify-content: flex-start;
     }
+    #projects::before { 
+        display: block; 
+        content: " "; 
+        margin-top: 30vh; 
+        visibility: hidden; 
+        pointer-events: none;
+    }
     #projects,
     #about {
-        margin-top: 25vh;
         max-width: 50%;
     }
     .about-me-heading,
@@ -335,6 +369,13 @@ footer {
         margin: auto;
         z-index: 1;
         background-color: var(--boxseethrough-color2);
+    }
+    #about::before {
+        display: block; 
+        content: " "; 
+        margin-top: 31vh; 
+        visibility: hidden; 
+        pointer-events: none;
     }
     .contact-section {
         display: flex;
