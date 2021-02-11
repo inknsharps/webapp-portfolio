@@ -265,7 +265,7 @@ footer {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    margin-top: 2vh;
+    margin-top: 4vh;
 }
 
 /* Media Queries */
@@ -379,7 +379,7 @@ footer {
     #about::before {
         display: block; 
         content: " "; 
-        margin-top: 30vh; 
+        margin-top: 30vh;   
         visibility: hidden; 
         pointer-events: none;
     }
@@ -392,10 +392,14 @@ footer {
         flex: 1 1 33.33%;
         min-width: 33.33%;
     }
-    .contact-section div {
-        flex: 1 1 100%;
-        min-width: 33.33%;
-        padding: 0 10vh;
+    /* This centers the contact form when viewing on a desktop */
+    .contact-section::before,
+    .contact-section::after {
+        display: block;
+        content: " "; 
+        margin: 0 30vh; 
+        visibility: hidden; 
+        pointer-events: none;
     }
 }
 
