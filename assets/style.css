@@ -45,7 +45,7 @@ header h1 {
 nav {
     flex: 2 2 65%;
     border-radius: 0 0 0 150px;
-    margin: 7vh 0;
+    margin: 0 0;
     padding: 0.5vh 0;
     background-color: var(--nav-color);
 }
@@ -84,7 +84,7 @@ main {
 #projects::before { 
     display: block; 
     content: " "; 
-    margin-top: 31vh; 
+    margin-top: 20vh; 
     visibility: hidden; 
     pointer-events: none;
   }
@@ -178,7 +178,7 @@ img[src*="600.jpg"] {
 #about:target::before { 
     display: block; 
     content: " "; 
-    margin-top: 31vh; 
+    margin-top: 20vh; 
     visibility: hidden; 
     pointer-events: none;
   }
@@ -273,7 +273,6 @@ footer {
 @media screen and (min-width:768px) {
     header h1 {
         text-align: left;
-        margin: 7vh 2vh 7vh 0;
         padding: 2vh;
     }
     .nav-links {
@@ -286,14 +285,14 @@ footer {
     #projects::before { 
         display: block; 
         content: " "; 
-        margin-top: 50vh; 
+        margin-top: 30vh; 
         visibility: hidden; 
         pointer-events: none;
     }
     #about:target::before { 
         display: block; 
         content: " "; 
-        margin-top: 50vh; 
+        margin-top: 30vh; 
         visibility: hidden; 
         pointer-events: none;
     }
@@ -354,10 +353,11 @@ footer {
         flex-wrap: wrap;
         justify-content: flex-start;
     }
-    #projects::before { 
+    #projects::before,
+    #about::before { 
         display: block; 
         content: " "; 
-        margin-top: 30vh; 
+        margin-top: 15vh; 
         visibility: hidden; 
         pointer-events: none;
     }
@@ -375,13 +375,13 @@ footer {
     .project-aside a:hover::after {
         width: 15vh;
     }
-    #about::before {
+    /* #about::before {
         display: block; 
         content: " "; 
-        margin-top: 30vh;   
+        margin-top: 15vh;   
         visibility: hidden; 
         pointer-events: none;
-    }
+    } */
     /* Styling to overwrite the previously defined :target::before rules and prevent any extra space from being added when #about is clicked in the nav. */
     #about:target::before { 
         margin-top: 30vh; 
