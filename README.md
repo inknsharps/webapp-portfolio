@@ -14,7 +14,7 @@ This is a portfolio page that I built for showcasing my deployed web application
 * Hover over project titles.
 * Built with mobile first design in mind, so the page is responsive to many screen widths.
 * Code related aids such as:
-    * Colors being completely defined by `:root` rules for easy theme changes.
+    * Colors and borders defined by `:root` rules for easy theme changes.
     * A `reset.css` for better browser support.
 * And some accessibility aids such as:
     * Strikethrough nav links for desktop browsing.
@@ -39,6 +39,7 @@ This is a portfolio page that I built for showcasing my deployed web application
 
 ## Credits
 
+* <a href="https://fonts.google.com/specimen/Armata">Armata</a> by Viktoriya Grabowska from Google Fonts for the headers.
 * <a href="https://picsum.photos/">Lorem Picsum</a> for the placeholder images.
 * Social media icons from <a href="https://www.iconfinder.com/">Iconfinder</a>.
 * CSS reset file based off of the <a href="https://github.com/hankchizljaw/modern-css-reset">Modern CSS reset</a> by Andy Bell/hankchizljaw.
