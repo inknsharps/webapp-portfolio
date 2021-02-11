@@ -18,7 +18,7 @@ html {
 /* Mobile first, so flex-direction is column by default */
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Helvetica, Arial, sans-serif;
     color: var(--p-color);
     background-image: url(./images/1021-2048x1206.jpg);
     background-size: cover;
@@ -96,6 +96,10 @@ main {
 .about-me-heading,
 .project-heading,
 .contact-section h3 {
+    font-family: 'Armata', sans-serif;
+    font-size: 24px;
+    letter-spacing: 2px;
+    font-weight: normal;
     text-align: center;
     text-transform: uppercase;
     padding: 1vh;
@@ -122,7 +126,7 @@ main {
 }
 
 .project-aside {
-    flex: 1 1 20%;
+    flex: 1 1 40%;
     border: var(--border);
     margin: 5px;
 }
@@ -164,7 +168,7 @@ img[src*="600.jpg"] {
     right: 0;
     bottom: 0;
     left: 0;
-    width: 50vh;
+    width: 40vh;
     height: 10vh;
     margin: auto;
     z-index: 1;
@@ -190,6 +194,7 @@ img[src*="600.jpg"] {
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
+    align-items: center;    
     border: var(--border);
     margin: 3.5vh;
     max-width: 100%;
@@ -197,8 +202,10 @@ img[src*="600.jpg"] {
 }
 
 .about-me-biography img {
+    border: var(--border);
+    border-radius: 100%;
     margin: 4vh 4vh 0;
-    max-width: 100%;
+    max-width: 50%;
 }
 
 .about-me-biography p {
@@ -290,10 +297,19 @@ footer {
         margin-top: 50vh; 
         visibility: hidden; 
         pointer-events: none;
-      }
+    }
     .about-me-heading,
     .project-heading {
         padding: 2vh;
+    }
+    .about-me-heading,
+    .project-heading,
+    .contact-section h3 {
+        font-size: 20px;
+    }
+    .project-main a:hover::after,
+    .project-aside a:hover::after {
+        width: 50vh;
     }
     .about-me-biography {
         flex-direction: row;
@@ -354,26 +370,16 @@ footer {
     .project-heading {
         margin: 1vh;
     }
+    .project-main a:hover::after {
+        width: 30vh;
+    }
     .project-aside a:hover::after {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        content: "Description";
-        position: absolute;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        left: 0;
-        width: 10vh;
-        height: 10vh;
-        margin: auto;
-        z-index: 1;
-        background-color: var(--boxseethrough-color2);
+        width: 15vh;
     }
     #about::before {
         display: block; 
         content: " "; 
-        margin-top: 31vh; 
+        margin-top: 30vh; 
         visibility: hidden; 
         pointer-events: none;
     }
