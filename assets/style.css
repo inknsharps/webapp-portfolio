@@ -11,10 +11,6 @@
     --form-border: 1px solid var(--nav-color);
 }
 
-html {
-    scroll-behavior: smooth;
-}
-
 /* Mobile first, so flex-direction is column by default */
 
 body {
@@ -178,8 +174,8 @@ img[src*="600.jpg"] {
 
 /* About me section styling. */
 
-/* This adds a section before the column so you scroll smoothly to this section when clicking the link in the nav. */
-#about::before { 
+/* When #about in the nav is clicked, this adds a section to push the section forward to prevent .about-me-heading from being obscured by the nav. When scrolled through normally this will not appear. */
+#about:target::before { 
     display: block; 
     content: " "; 
     margin-top: 31vh; 
@@ -294,7 +290,7 @@ footer {
         visibility: hidden; 
         pointer-events: none;
     }
-    #about::before { 
+    #about:target::before { 
         display: block; 
         content: " "; 
         margin-top: 50vh; 
@@ -385,6 +381,10 @@ footer {
         margin-top: 30vh;   
         visibility: hidden; 
         pointer-events: none;
+    }
+    /* Styling to overwrite the previously defined :target::before rules and prevent any extra space from being added when #about is clicked in the nav. */
+    #about:target::before { 
+        margin-top: 30vh; 
     }
     .contact-section {
         display: flex;
