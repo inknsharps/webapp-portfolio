@@ -9,6 +9,11 @@
     --p-color: #ffffff;
     --border: 3px double var(--nav-color);
     --form-border: 1px solid var(--nav-color);
+    --project-1: "WhiptUP";
+    --project-2: "Weather Dashboard";
+    --project-3: "Javascript Quiz";
+    --project-4: "TBA";
+    --project-5: "TBA";
 }
 
 /* Mobile first, so flex-direction is column by default */
@@ -154,12 +159,16 @@ img[src*="600.jpg"] {
 }
 
 /* This adds an overlay with text. Will need to update styling once web applications are created and properly linked. */
-.project-main a:hover::after,
-.project-aside a:hover::after {
+/* .project-main a:hover::after,
+.project-aside a:hover::after { */
+.project-1:hover::after, 
+.project-2:hover::after,
+.project-3:hover::after,
+.project-4:hover::after,
+.project-5:hover::after {
     display: flex;
     justify-content: center;
     align-items: center;
-    content: "Project Name";
     position: absolute;
     top: 0;
     right: 0;
@@ -170,6 +179,26 @@ img[src*="600.jpg"] {
     margin: auto;
     z-index: 1;
     background-color: var(--boxseethrough-color2);
+}
+
+.project-1:hover::after {
+    content: var(--project-1);
+}
+
+.project-2:hover::after {
+    content: var(--project-2);
+}
+
+.project-3:hover::after {
+    content: var(--project-3);
+}
+
+.project-4:hover::after {
+    content: var(--project-4);
+}
+
+.project-5:hover::after {
+    content: var(--project-5);
 }
 
 /* About me section styling. */
